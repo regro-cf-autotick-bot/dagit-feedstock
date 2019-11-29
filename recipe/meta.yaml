@@ -33,8 +33,8 @@ requirements:
     - flask-graphql >=2.0.0
     - flask-sockets >=0.2.1
     - future
-    - gevent 1.3.7.*
-    - gevent-websocket 0.10.1.*
+    - gevent
+    - gevent-websocket >=0.10.1
     - graphql-core >=2.1,<3
     - graphql-ws >=0.3.0
     - nbconvert >=5.4.0
@@ -59,4 +59,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - xhochy
+    - conda-forge/dagster
