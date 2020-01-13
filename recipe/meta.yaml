@@ -1,5 +1,5 @@
 {% set name = "dagit" %}
-{% set version = "0.6.6" %}
+{% set version = "0.6.7" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 3011b3c5a15e49bf8e93e3d0db0f4712a8e127ea859ff5aad508ba57f514dba4
+  sha256: 67f423ef44711f6b476a532a534172c3048ccd40a423bdd6842d0eb26f2e9a6c
 
 build:
   number: 0
@@ -46,7 +46,10 @@ test:
     - dagit
     - dagit.schema
     - dagit.templates
+  requires:
+    - pip
   commands:
+    - pip check
     - dagit-cli --help
     - dagit --help
 
