@@ -46,7 +46,10 @@ test:
     - dagit
     - dagit.schema
     - dagit.templates
+  requires:
+    - pip
   commands:
+    - pip check
     - dagit-cli --help
     - dagit --help
 
