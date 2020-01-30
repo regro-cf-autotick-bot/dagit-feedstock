@@ -1,5 +1,5 @@
 {% set name = "dagit" %}
-{% set version = "0.6.7.post0" %}
+{% set version = "0.6.9" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: a2409a89d3226bd6873ec294b1098590b37826ef3cb076104520ee35f08c4eb7
+  sha256: 80b797cc65d10dec1931d5b726e38a826823c5fcb36f1c06e0d3dcf581fca2ac
 
 build:
   number: 0
