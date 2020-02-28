@@ -1,13 +1,13 @@
 {% set name = "dagit" %}
-{% set version = "0.6.7.post0" %}
+{% set version = "0.7.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: a2409a89d3226bd6873ec294b1098590b37826ef3cb076104520ee35f08c4eb7
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f719452ec402929180255d4db1da70c67e9c546b6b1f80c3937adf41d41c639b
 
 build:
   number: 0
@@ -15,7 +15,7 @@ build:
   entry_points:
     - dagit-cli = dagit.cli:main
     - dagit = dagit.dagit:main
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -54,11 +54,11 @@ test:
     - dagit --help
 
 about:
-  home: "https://github.com/dagster-io/dagster"
+  home: https://github.com/dagster-io/dagster
   license: Apache-2.0
   license_family: APACHE
-  license_file:  LICENSE
-  summary: "Web UI for dagster."
+  license_file: LICENSE
+  summary: Web UI for dagster.
 
 extra:
   recipe-maintainers:
